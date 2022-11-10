@@ -11,9 +11,34 @@
 
 I made a web application that allows you to see a food menu. This menu has different buttons and depending on which button we touch it will bring us that type of food. If we tap on All, it will bring up all the meals again.
 
-## Feel free to edit my code
+## Technologies used
 
-In helpers/data.js we have the foods. And if you want you cand add more:
+1. React JS
+2. CSS3
+
+## Galery
+
+![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-0.jpg)
+
+![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-1.jpg)
+
+![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-2.jpg)
+
+![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-3.jpg)
+
+![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-4.jpg)
+
+## Portfolio Link
+
+`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Menu%20app%20page`
+
+## Video
+
+https://user-images.githubusercontent.com/99032604/198900841-8d70a4c7-80fa-4a15-965f-30f6e4c765b5.mp4
+
+## Documentation
+
+In the file located in `helpers/data.js` you will find all the information about the meals in the menu:
 
 ```
 export const menu = [
@@ -92,39 +117,30 @@ export const menu = [
 ];
 ```
 
-Each button category has a filter to filter all the foods with that category:
+In the `Main.jsx` component we will find the application logic. We will have a state called `àllCategories` in which we will load the meals of the category that we touch. If we touch the button ALL we will execute the function `handleCategoryAll()` it will load all the categories. On the other hand if we choose a button of a particular category it will execute the function of the chosen category. In this case we will use `handleCategoryLunch()` as the other functions will do a filter looking for the chosen category and will set only the meals of that category in the `allCategories` state:
 
 ```
+const [allCategories, setCategories] = useState(menu);
+
+const handleCategoryAll = () => {
+    setCategories(menu);
+};
+
+const handleCategoryBreakfast = () => {
+    const breakfastArray = menu.filter((x) => x.category === "breakfast");
+
+    setCategories(breakfastArray);
+};
+
+const handleCategoryLunch = () => {
+    const breakfastArray = menu.filter((x) => x.category === "lunch");
+
+    setCategories(breakfastArray);
+};
+
 const handleCategoryShakes = () => {
     const breakfastArray = menu.filter((x) => x.category === "shakes");
 
     setCategories(breakfastArray);
 };
 ```
-
-## Technologies used
-
-1. React JS
-2. CSS3
-
-## Galery
-
-![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-0.jpg)
-
-![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-1.jpg)
-
-![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-2.jpg)
-
-![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-3.jpg)
-
-![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-4.jpg)
-
-## Portfolio Link
-
-`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Menu%20app%20page`
-
-## Video
-
-
-https://user-images.githubusercontent.com/99032604/198900841-8d70a4c7-80fa-4a15-965f-30f6e4c765b5.mp4
-
