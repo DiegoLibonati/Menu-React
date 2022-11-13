@@ -30,7 +30,7 @@ I made a web application that allows you to see a food menu. This menu has diffe
 
 ## Portfolio Link
 
-`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Menu%20app%20page`
+`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Menu%20App%20Page`
 
 ## Video
 
