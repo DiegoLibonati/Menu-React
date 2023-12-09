@@ -15,22 +15,10 @@ I made a web application that allows you to see a food menu. This menu has diffe
 
 1. React JS
 2. CSS3
-
-## Galery
-
-![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-0.jpg)
-
-![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-1.jpg)
-
-![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-2.jpg)
-
-![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-3.jpg)
-
-![Menu-App-Page](https://raw.githubusercontent.com/DiegoLibonati/DiegoLibonatiWeb/main/data/projects/React/Imagenes/reactmenu-4.jpg)
-
+   
 ## Portfolio Link
 
-`https://diegolibonati.github.io/DiegoLibonatiWeb/#/projects?q=Menu%20App%20Page`
+[`https://www.diegolibonati.com.ar/#/project/69`](https://www.diegolibonati.com.ar/#/project/69)
 
 ## Video
 
