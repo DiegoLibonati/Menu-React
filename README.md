@@ -14,7 +14,8 @@ I made a web application that allows you to see a food menu. This menu has diffe
 ## Technologies used
 
 1. React JS
-2. CSS3
+2. Typescript
+3. CSS3
    
 ## Portfolio Link
 
@@ -26,10 +27,12 @@ https://user-images.githubusercontent.com/99032604/198900841-8d70a4c7-80fa-4a15-
 
 ## Documentation
 
-In the file located in `helpers/data.js` you will find all the information about the meals in the menu:
+In the file located in `helpers/data.ts` you will find all the information about the meals in the menu:
 
 ```
-export const menu = [
+import { Menu } from "../entities/entities";
+
+export const menu: Menu[] = [
   {
     id: 1,
     title: "buttermilk pancakes",
@@ -105,30 +108,36 @@ export const menu = [
 ];
 ```
 
-In the `Main.jsx` component we will find the application logic. We will have a state called `àllCategories` in which we will load the meals of the category that we touch. If we touch the button ALL we will execute the function `handleCategoryAll()` it will load all the categories. On the other hand if we choose a button of a particular category it will execute the function of the chosen category. In this case we will use `handleCategoryLunch()` as the other functions will do a filter looking for the chosen category and will set only the meals of that category in the `allCategories` state:
+In the `Main.tsx` component we will find the application logic. We will have a state called `àllCategories` in which we will load the meals of the category that we touch. If we touch the button ALL we will execute the function `handleCategoryAll()` it will load all the categories. On the other hand if we choose a button of a particular category it will execute the function of the chosen category. In this case we will use `handleCategoryLunch()` as the other functions will do a filter looking for the chosen category and will set only the meals of that category in the `allCategories` state:
 
 ```
-const [allCategories, setCategories] = useState(menu);
+const [allCategories, setCategories] = useState<Menu[]>(menu);
 
-const handleCategoryAll = () => {
-    setCategories(menu);
+const handleCategoryAll: React.MouseEventHandler<HTMLButtonElement> = () => {
+  setCategories(menu);
 };
 
-const handleCategoryBreakfast = () => {
-    const breakfastArray = menu.filter((x) => x.category === "breakfast");
+const handleCategoryBreakfast: React.MouseEventHandler<
+  HTMLButtonElement
+> = () => {
+  const breakfastArray = menu.filter((x) => x.category === "breakfast");
 
-    setCategories(breakfastArray);
+  setCategories(breakfastArray);
 };
 
-const handleCategoryLunch = () => {
-    const breakfastArray = menu.filter((x) => x.category === "lunch");
+const handleCategoryLunch: React.MouseEventHandler<
+  HTMLButtonElement
+> = () => {
+  const breakfastArray = menu.filter((x) => x.category === "lunch");
 
-    setCategories(breakfastArray);
+  setCategories(breakfastArray);
 };
 
-const handleCategoryShakes = () => {
-    const breakfastArray = menu.filter((x) => x.category === "shakes");
+const handleCategoryShakes: React.MouseEventHandler<
+  HTMLButtonElement
+> = () => {
+  const breakfastArray = menu.filter((x) => x.category === "shakes");
 
-    setCategories(breakfastArray);
+  setCategories(breakfastArray);
 };
 ```

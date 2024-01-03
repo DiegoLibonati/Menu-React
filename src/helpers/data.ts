@@ -1,4 +1,6 @@
-export const menu = [
+import { Menu } from "../entities/entities";
+
+export const menu: Menu[] = [
   {
     id: 1,
     title: "buttermilk pancakes",
