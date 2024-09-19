@@ -1,4 +1,4 @@
-# Menu-App-Page
+# Menu React
 
 ## Getting Started
 
@@ -19,7 +19,7 @@ I made a web application that allows you to see a food menu. This menu has diffe
    
 ## Portfolio Link
 
-[`https://www.diegolibonati.com.ar/#/project/69`](https://www.diegolibonati.com.ar/#/project/69)
+[`https://www.diegolibonati.com.ar/#/project/Menu-React`](https://www.diegolibonati.com.ar/#/project/Menu-React)
 
 ## Video
 
